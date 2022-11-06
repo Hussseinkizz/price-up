@@ -1,0 +1,55 @@
+{
+  "extends": [
+    "plugin:jsx-a11y/recommended",
+    "next/core-web-vitals"
+  ],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks",
+    "jsx-a11y"
+  ],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "camelcase": "error",
+    "spaced-comment": "error",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "type",
+         "index", "sibling", "parent", "internal", "external", "builtin", "object"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@/**/**",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "react-hooks/exhaustive-deps": "error"
+  }
+}
