@@ -1,5 +1,7 @@
 import Link from 'next/link'
-import { useWindowScroll } from 'react-recipes';
+// import { useWindowScroll } from 'react-recipes';
+const {useWindowScroll} = require('react-recipes');
+import Image from 'next/image'
 
 type Props = {}
 // const Window = window
@@ -25,7 +27,7 @@ export const Header = (props: Props) => {
             <div className="nav-start">
                 <Link href="/">
                     <div className="_flex-is-row gap-2">
-                    <img src={isScrolling ? '/Price-Up-Logo-Colored.svg' : '/Price-Up-Logo.svg'} alt="logo" className="w-10 h-10" />
+                    <Image width={50} height={50} src={isScrolling ? '/Price-Up-Logo-Colored.svg' : '/Price-Up-Logo.svg'} alt="logo" className="w-10 h-10" />
                     <span className={`transition-colors font-bold uppercase text-base md:text-xl font-roboto ${isScrolling ? 'text-indigo-600' : 'text-white'}`}>Price Up</span>
                     </div>
                 </Link>
