@@ -1,27 +1,35 @@
-import DesktopLayout from './DesktopLayout';
-import MobileLayout from './MobileLayout';
-import { useStore } from '../hooks/useStore';
+// import { useStore } from '../hooks/useStore';
+import { Header } from './Header';
 import Head from 'next/head';
 
 type Props = {
   children: JSX.Element | JSX.Element[];
 };
 
-const Layout = ({ children }: Props) => {
-  const {
-    state: { pageTitle },
-  } = useStore();
+export const Layout = ({ children }: Props) => {
+  // const {
+  //   state: { pageTitle },
+  // } = useStore();
 
   return (
     <>
       <Head>
-        <title>{pageTitle}</title>
+        <title>Price UP</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <DesktopLayout>{children}</DesktopLayout>
-      <MobileLayout>{children}</MobileLayout>
+      <section className="bg-indigo-600 text-white w-full min-h-screen">
+      {/* The Header */}
+      <Header />
+      {/* The Main View */}
+      <main className="w-full h-screen flex flex-auto flex-col justify-between items-center">
+          {children}
+      <footer className="w-full bg-indigo-700">
+        some footer
+      </footer>
+      </main>
+    </section>
     </>
   );
 };
 
-export default Layout;
+// export default Layout;

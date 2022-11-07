@@ -1,16 +1,17 @@
 // import '../styles/fonts.module.css';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import Layout from '../components/Layout';
 import { StoreProvider } from '../hooks/useStore';
+import { Layout } from '@ui/Layout';
 import { ThemeProvider } from '@material-tailwind/react';
+// import Layout from '@ui/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       {/* Client Data Layer */}
       <StoreProvider>
-        {/* Material Taiwind Layer */}
+        {/* Material Tailwind Layer */}
         <ThemeProvider>
           <Layout>
             <Component {...pageProps} />
