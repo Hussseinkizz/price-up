@@ -1,7 +1,7 @@
+import Image from 'next/image'
 import Link from 'next/link'
 // import { useWindowScroll } from 'react-recipes';
 const {useWindowScroll} = require('react-recipes');
-import Image from 'next/image'
 
 type Props = {}
 // const Window = window
